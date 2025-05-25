@@ -1,0 +1,4 @@
+server/
+drizzle/
+node_modules/
+.git/
