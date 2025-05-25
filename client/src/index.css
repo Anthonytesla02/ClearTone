@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --background: 36 43% 97%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 25 80% 72%; /* #F7BA7B - peach */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 271 36% 65%; /* #A989C5 - lavender */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 173 68% 59%; /* #4ECDC4 - teal */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  --cream: 36 83% 93%;
+  --darkgray: 0 0% 20%; /* #333333 */
+  --slate: 210 20% 98%;
+}
+
+.dark {
+  --background: 36 43% 97%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 25 80% 72%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 271 36% 65%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 173 68% 59%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--cream));
+    color: hsl(var(--darkgray));
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .bg-gradient {
+    background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .text-peach {
+    color: hsl(var(--primary));
+  }
+
+  .text-lavender {
+    color: hsl(var(--secondary));
+  }
+
+  .text-teal {
+    color: hsl(var(--accent));
+  }
+
+  .bg-peach {
+    background-color: hsl(var(--primary));
+  }
+
+  .bg-lavender {
+    background-color: hsl(var(--secondary));
+  }
+
+  .bg-teal {
+    background-color: hsl(var(--accent));
+  }
+
+  .bg-darkgray {
+    background-color: hsl(var(--darkgray));
+  }
+  
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .cta-button {
+    transition-property: all;
+    transition-duration: 300ms;
+    transform: translateY(0);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .hover-scale {
+    transition-property: transform;
+    transition-duration: 300ms;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+
+  .step-card {
+    position: relative;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  
+  .step-card:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  .count-box {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    font-weight: 700;
+    z-index: 10;
+  }
+}
