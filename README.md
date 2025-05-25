@@ -2,45 +2,43 @@
 
 This is a high-converting landing page for the ClearTone acne-fighting routine ebook.
 
-## Deployment Instructions for Vercel
+## Deployment Instructions 
 
-### Option 1: Easy Deployment (Recommended)
+### Option 1: Deploy to Netlify (Recommended for Full Project)
 
-1. **Extract the client folder**: Download only the `client` folder from this project
-2. **Create a new repository**: Create a new GitHub repository with just the client folder contents
-3. **Connect to Vercel**:
-   - Log in to [Vercel](https://vercel.com)
-   - Click "Add New" > "Project"
-   - Import your GitHub repository
-   - Configure as follows:
-     - Framework: "Vite"
-     - Build Command: `npm run build`
-     - Output Directory: `dist`
-   - Click "Deploy"
+1. Create an account on [Netlify](https://netlify.com) if you don't have one
+2. From the Netlify dashboard, click "Add new site" > "Import an existing project"
+3. Connect your GitHub/GitLab account and select your repository
+4. Configure your build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+5. Click "Deploy site"
 
-### Option 2: Using the Full Project Structure
+### Option 2: Use GitHub Pages
 
-1. **Download the project**: Get the complete project code
-2. **Deploy with these settings**:
-   - Root Directory: `client`
-   - Build Command: `npm install && npm run build`
-   - Output Directory: `dist`
-   - Install Command: `npm install`
-
-### Option 3: Use a Static Hosting Service
-
-If you're experiencing issues with Vercel, you can:
-1. Run the build locally:
+1. Run the build process locally:
    ```
-   cd client
-   npm install
    npm run build
    ```
-2. Upload the generated `dist` folder to any static hosting service:
-   - Netlify Drop
-   - GitHub Pages
-   - Firebase Hosting
-   - Amazon S3
+2. The compiled assets will be in the `dist` folder
+3. Create a new repository on GitHub
+4. Push the contents of the `dist` folder to this repository
+5. Enable GitHub Pages in your repository settings:
+   - Go to Settings > Pages
+   - Select "main" branch and the root folder
+   - Click "Save"
+
+### Option 3: Deploy Using Netlify Drop
+
+If you want the simplest possible deployment:
+
+1. Run the build locally:
+   ```
+   npm run build
+   ```
+2. Go to [Netlify Drop](https://app.netlify.com/drop)
+3. Drag and drop your `dist` folder
+4. Your site will be instantly published with a Netlify subdomain
 
 ### Configure Custom Domain (Optional)
 
