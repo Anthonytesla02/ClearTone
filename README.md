@@ -4,54 +4,49 @@ This is a high-converting landing page for the ClearTone acne-fighting routine e
 
 ## Deployment Instructions for Vercel
 
-### Prerequisites
-- A Vercel account (sign up at [vercel.com](https://vercel.com) if you don't have one)
-- Git installed on your computer
-- The ClearTone project files
+### Option 1: Easy Deployment (Recommended)
 
-### Step 1: Prepare Your Project for Deployment
+1. **Extract the client folder**: Download only the `client` folder from this project
+2. **Create a new repository**: Create a new GitHub repository with just the client folder contents
+3. **Connect to Vercel**:
+   - Log in to [Vercel](https://vercel.com)
+   - Click "Add New" > "Project"
+   - Import your GitHub repository
+   - Configure as follows:
+     - Framework: "Vite"
+     - Build Command: `npm run build`
+     - Output Directory: `dist`
+   - Click "Deploy"
 
-The project is already configured for Vercel deployment with:
-- A `vercel.json` configuration file
-- Client-side routing handled properly
-- All static assets organized correctly
+### Option 2: Using the Full Project Structure
 
-### Step 2: Deploy to Vercel
-
-#### Option 1: Deploy from the Vercel Dashboard
-
-1. Log in to your Vercel account
-2. Click "Add New" > "Project"
-3. Import your project from GitHub, GitLab, or Bitbucket
-   - If your project is not in a Git repository yet, first push it to GitHub/GitLab/Bitbucket
-4. Configure the project settings:
-   - Framework Preset: Select "Vite"
-   - Build Command: `npm run build`
+1. **Download the project**: Get the complete project code
+2. **Deploy with these settings**:
+   - Root Directory: `client`
+   - Build Command: `npm install && npm run build`
    - Output Directory: `dist`
    - Install Command: `npm install`
-5. Click "Deploy"
 
-#### Option 2: Deploy Using the Vercel CLI
+### Option 3: Use a Static Hosting Service
 
-1. Install the Vercel CLI:
+If you're experiencing issues with Vercel, you can:
+1. Run the build locally:
    ```
-   npm install -g vercel
+   cd client
+   npm install
+   npm run build
    ```
+2. Upload the generated `dist` folder to any static hosting service:
+   - Netlify Drop
+   - GitHub Pages
+   - Firebase Hosting
+   - Amazon S3
 
-2. Navigate to your project directory and run:
-   ```
-   vercel
-   ```
+### Configure Custom Domain (Optional)
 
-3. Follow the prompts to log in and configure your project.
-
-4. After deployment, Vercel will provide you with a URL to access your landing page.
-
-### Step 3: Configure Custom Domain (Optional)
-
-1. From your Vercel dashboard, select your project
-2. Go to "Settings" > "Domains"
-3. Add your custom domain and follow the instructions to set up DNS records
+1. From your hosting dashboard, go to domain settings
+2. Add your custom domain
+3. Follow provider-specific instructions to set up DNS records
 
 ## Making Changes After Deployment
 
