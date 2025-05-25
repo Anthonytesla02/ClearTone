@@ -27,8 +27,9 @@ const FinalCTA: React.FC = () => {
             Join thousands of others who have transformed their skin and their confidence with the ClearTone routine
           </p>
           <a 
-            href="#checkout" 
-            onClick={handleClick}
+            href="https://bit.ly/cleartone" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-button bg-white text-lavender hover:bg-gray-100 py-4 px-8 rounded-full font-montserrat font-bold inline-block text-lg mb-6"
           >
             GET INSTANT ACCESS NOW

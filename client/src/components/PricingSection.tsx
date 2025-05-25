@@ -14,8 +14,8 @@ const PricingSection: React.FC = () => {
 
   const handleCheckout = (e: React.MouseEvent) => {
     e.preventDefault();
-    // In a real implementation, this would redirect to an external checkout page
-    window.open('https://checkout.example.com/cleartone-ebook', '_blank');
+    // Redirect to the specified checkout page
+    window.open('https://bit.ly/cleartone', '_blank');
   };
 
   return (

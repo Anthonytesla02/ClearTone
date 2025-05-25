@@ -80,7 +80,9 @@ const BeforeAfterSection: React.FC = () => {
           viewport={{ once: true }}
         >
           <a 
-            href="#checkout" 
+            href="https://bit.ly/cleartone" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-button bg-teal hover:bg-teal-600 text-white py-4 px-8 rounded-full font-montserrat font-bold inline-block text-lg"
           >
             GET MY COPY NOW

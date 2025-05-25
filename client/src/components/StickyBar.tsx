@@ -67,12 +67,14 @@ const StickyBar: React.FC = () => {
                 <p className="text-xs">Secs</p>
               </div>
             </div>
-            <button
-              onClick={handleCheckout}
+            <a
+              href="https://bit.ly/cleartone"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button bg-teal hover:bg-teal-600 text-white py-3 px-6 rounded-full font-montserrat font-bold text-center w-full sm:w-auto"
             >
               GET YOUR COPY NOW
-            </button>
+            </a>
           </div>
         </motion.div>
       )}

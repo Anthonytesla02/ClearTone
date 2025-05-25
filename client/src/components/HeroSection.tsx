@@ -26,7 +26,9 @@ const HeroSection: React.FC = () => {
               <p className="font-bold mt-2">— Rebecca T.</p>
             </div>
             <a 
-              href="#checkout" 
+              href="https://bit.ly/cleartone" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button bg-teal hover:bg-teal-600 text-white py-4 px-8 rounded-full font-montserrat font-bold inline-block text-lg"
             >
               START HEALING YOUR SKIN NOW

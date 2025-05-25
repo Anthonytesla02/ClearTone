@@ -14,7 +14,7 @@ export const useCountdown = (initialHours = 12): CountdownState => {
   });
 
   useEffect(() => {
-    // Set the target time to 24 hours from when the component first mounts
+    // Set the target time to the specified hours from when the component first mounts
     const now = new Date();
     const targetTime = new Date(now);
     targetTime.setHours(now.getHours() + initialHours);
@@ -23,9 +23,11 @@ export const useCountdown = (initialHours = 12): CountdownState => {
       const currentTime = new Date();
       const difference = targetTime.getTime() - currentTime.getTime();
       
-      // If the target time has passed, reset it
+      // If the target time has passed, reset it to a new 12-hour period
       if (difference < 0) {
-        targetTime.setHours(targetTime.getHours() + initialHours);
+        const newTargetTime = new Date();
+        newTargetTime.setHours(newTargetTime.getHours() + 12); // Always reset to 12 hours
+        targetTime.setTime(newTargetTime.getTime());
         return;
       }
       
